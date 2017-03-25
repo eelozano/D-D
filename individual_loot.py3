@@ -38,34 +38,34 @@ if 0 <= challenge_rating <= 4:
         print("You gained: " + str(d6(1)) + " platinum pieces.")
 
 # Rolling on CR 5-10 table
-if challenge_rating >= 5 and challenge_rating <= 10:
-    if rando_hundred >= 1 and rando_hundred <= 30:
+if 5 <= challenge_rating <= 10:
+    if 1 <= rando_hundred <= 30:
         print("You gained: " + str(d6(4) * 100) + " copper pieces and " + str(d6(1)) + " electrum pieces." )
-    if rando_hundred >= 31 and rando_hundred <= 60:
+    if 31 <= rando_hundred <= 60:
         print("You gained: " + str(d6(6) * 10) + " silver pieces and " + str(d6(2) * 10) + " gold pieces.")
-    if rando_hundred >= 61 and rando_hundred <= 70:
+    if 61 <= rando_hundred <= 70:
         print("You gained: " + str(d6(3) * 10) + " electrum pieces and " + str(d6(2) * 10) + " gold pieces.")
-    if rando_hundred >= 71 and rando_hundred <= 95:
+    if 71 <= rando_hundred <= 95:
         print("You gained: " + str(d6(4) * 10) + " gold pieces.")
-    if rando_hundred >= 96 and rando_hundred <= 100:
+    if 96 <= rando_hundred <= 100:
         print("You gained: " + str(d6(2) * 10) + " gold pieces and " + str(d6(3)) + " platinum pieces.")
 
 # Rolling on CR 11-16 table
-if challenge_rating >= 11 and challenge_rating <= 16:
-    if rando_hundred >= 1 and rando_hundred <= 20:
+if 11 <= challenge_rating <= 16:
+    if 1 <= rando_hundred <= 20:
         print("You gained: " + str(d6(4) * 100) + " silver pieces and " + str(d6(1) * 100) + " gold pieces." )
-    if rando_hundred >= 21 and rando_hundred <= 35:
+    if 21 <= rando_hundred <= 35:
         print("You gained: " + str(d6(1) * 100) + " electrum pieces and " + str(d6(1) * 100) + " gold pieces.")
-    if rando_hundred >= 36 and rando_hundred <= 75:
+    if 36 <= rando_hundred <= 75:
         print("You gained: " + str(d6(2) * 100) + " gold pieces and " + str(d6(1) * 10) + " platinum pieces.")
-    if rando_hundred >= 76 and rando_hundred <= 100:
+    if 76 <= rando_hundred <= 100:
         print("You gained: " + str(d6(2) * 100) + " gold pieces and " + str(d6(2) * 10) + " platinum pieces.")
 
 # Rolling on CR 17-20 table
-if challenge_rating >= 17 and challenge_rating <= 20:
-    if rando_hundred >= 1 and rando_hundred <= 15:
+if 17 <= challenge_rating <= 20:
+    if 1 <= rando_hundred <= 15:
         print("You gained: " + str(d6(2) * 1000) + " electrum pieces and " + str(d6(8) * 100) + " gold pieces." )
-    if rando_hundred >= 16 and rando_hundred <= 55:
+    if 16 <= rando_hundred <= 55:
         print("You gained: " + str(d6(1) * 1000) + " gold pieces and " + str(d6(1) * 100) + " platinum pieces.")
-    if rando_hundred >= 56 and rando_hundred <= 100:
+    if 56 <= rando_hundred <= 100:
         print("You gained: " + str(d6(1) * 1000) + " gold pieces and " + str(d6(2) * 100) + " platinum pieces.")
