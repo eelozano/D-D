@@ -15,7 +15,7 @@ from dice_roller import *
 challenge_rating = int(input("Please enter a challenge rating between 0 and 20: "))
 # Simple check of the input
 while challenge_rating < 0 or challenge_rating > 20:
-    int(input("Please enter a challenge rating between 0 and 20: "))
+    challenge_rating = int(input("Please enter a challenge rating between 0 and 20: "))
 
 # Rolling a hundred-sided die to determine what on the loot table to return.
 rando_hundred = d100(1)
