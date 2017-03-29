@@ -6,7 +6,7 @@
 # group loot table which is much more complex as it rolls on several different
 # tables for monetary and non-monetary tables.
 
-from dice_roller import *
+from dice_roller import d100,d6
 
 
 
