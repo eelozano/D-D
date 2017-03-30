@@ -18,54 +18,53 @@ while challenge_rating < 0 or challenge_rating > 20:
     challenge_rating = int(input("Please enter a challenge rating between 0 and 20: "))
 
 # Rolling a hundred-sided die to determine what on the loot table to return.
-rando_hundred = d100(1)
+rando_hundred = d100()
 
 # Tables based on DM Guide pg. 136
 
 # Rolling on CR 0 - 4 table
 # if challenge_rating >= 0 and challenge_rating <= 4:
 if 0 <= challenge_rating <= 4:
-    #if rando_hundred >= 1 and rando_hundred <= 30:
     if 1 <= rando_hundred <= 30:
-        print("You gained: " + str(d6(5)) + " copper pieces.")
+        print("You gained {:,} copper pieces.".format(d6(5)))
     if 31 <= rando_hundred <= 60:
-        print("You gained: " + str(d6(4)) + " silver pieces.")
+        print("You gained {:,} silver pieces.".format(d6(4)))
     if 61 <= rando_hundred <= 70:
-        print("You gained: " + str(d6(3)) + " electrum pieces.")
+        print("You gained: {:,} electrum pieces.".format(d6(3)))
     if 71 <= rando_hundred <= 95:
-        print("You gained: " + str(d6(3)) + " gold pieces.")
+        print("You gained: {:,} gold pieces.".format(d6(3)))
     if 96 <= rando_hundred <= 100:
-        print("You gained: " + str(d6(1)) + " platinum pieces.")
+        print("You gained: {:,} platinum pieces.".format(d6()))
 
 # Rolling on CR 5-10 table
 if 5 <= challenge_rating <= 10:
     if 1 <= rando_hundred <= 30:
-        print("You gained: " + str(d6(4) * 100) + " copper pieces and " + str(d6(1)) + " electrum pieces." )
+        print("You gained: {:,} copper pieces and {:,} electrum pieces".format(d6(4)*100,(d6())))
     if 31 <= rando_hundred <= 60:
-        print("You gained: " + str(d6(6) * 10) + " silver pieces and " + str(d6(2) * 10) + " gold pieces.")
+        print("You gained: {:,} silver pieces and {:,} gold pieces.".format(d6(6) * 10,d6(2) * 10))
     if 61 <= rando_hundred <= 70:
-        print("You gained: " + str(d6(3) * 10) + " electrum pieces and " + str(d6(2) * 10) + " gold pieces.")
+        print("You gained: {:,} electrum pieces and {:,} gold pieces".format(d6(3) * 10,d6(2) * 10))
     if 71 <= rando_hundred <= 95:
-        print("You gained: " + str(d6(4) * 10) + " gold pieces.")
+        print("You gained: {:,} gold pieces.".format(d6(4)*10))
     if 96 <= rando_hundred <= 100:
-        print("You gained: " + str(d6(2) * 10) + " gold pieces and " + str(d6(3)) + " platinum pieces.")
+        print("You gained: {:,} gold pieces and {:,} platinum pieces".format(d6(2) * 10, d6(3)))
 
 # Rolling on CR 11-16 table
 if 11 <= challenge_rating <= 16:
     if 1 <= rando_hundred <= 20:
-        print("You gained: " + str(d6(4) * 100) + " silver pieces and " + str(d6(1) * 100) + " gold pieces." )
+        print("You gained {:,} silver pieces and {:,} gold pieces.".format(d6(4)*100,d6()*100))
     if 21 <= rando_hundred <= 35:
-        print("You gained: " + str(d6(1) * 100) + " electrum pieces and " + str(d6(1) * 100) + " gold pieces.")
+        print("You gained {:,} electrum pieces and {:,} gold pieces".format(d6()*100,d6()*100))
     if 36 <= rando_hundred <= 75:
-        print("You gained: " + str(d6(2) * 100) + " gold pieces and " + str(d6(1) * 10) + " platinum pieces.")
+        print("You gained {:,} gold pieces and {:,} platinum pieces".format(d6(2)*100,d6()*10))
     if 76 <= rando_hundred <= 100:
-        print("You gained: " + str(d6(2) * 100) + " gold pieces and " + str(d6(2) * 10) + " platinum pieces.")
+        print("You gained {:,} gold pieces and {:,} platinum pieces.".format(d6(2)*100,d6(2)*10))
 
 # Rolling on CR 17-20 table
 if 17 <= challenge_rating <= 20:
     if 1 <= rando_hundred <= 15:
-        print("You gained: " + str(d6(2) * 1000) + " electrum pieces and " + str(d6(8) * 100) + " gold pieces." )
+        print("You gained {:,} electrum pieces and {:,} gold pieces.".format(d6(2)*1000,d6(8)*100))
     if 16 <= rando_hundred <= 55:
-        print("You gained: " + str(d6(1) * 1000) + " gold pieces and " + str(d6(1) * 100) + " platinum pieces.")
+        print("You gained {:,} gold pieces and {:,} platinum pieces.".format(d6()*1000,d6()*100))
     if 56 <= rando_hundred <= 100:
-        print("You gained: " + str(d6(1) * 1000) + " gold pieces and " + str(d6(2) * 100) + " platinum pieces.")
+        print("You gained {:,} gold pieces and {:,} platinum pieces.".format(d6()*1000,d6(2)*100))

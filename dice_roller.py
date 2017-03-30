@@ -5,7 +5,7 @@
 from random import *
 
 # Roll four-sided die
-def d4(number):
+def d4(number=1):
     dice_roll = 0
     while number > 0:
         rando = randint(1,4)
@@ -14,7 +14,7 @@ def d4(number):
     return dice_roll
 
 # Roll six-sided die
-def d6(number):
+def d6(number=1):
     dice_roll = 0
     while number > 0:
         rando = randint(1,6)
@@ -23,7 +23,7 @@ def d6(number):
     return dice_roll
 
 # Roll eight-sided die
-def d8(number):
+def d8(number=1):
     dice_roll = 0
     while number > 0:
         rando = randint(1,8)
@@ -32,7 +32,7 @@ def d8(number):
     return dice_roll
 
 # Roll ten-sided die
-def d10(number):
+def d10(number=1):
     dice_roll = 0
     while number > 0:
         rando = randint(1,10)
@@ -41,7 +41,7 @@ def d10(number):
     return dice_roll
 
 # Roll twelve-sided die
-def d12(number):
+def d12(number=1):
     dice_roll = 0
     while number > 0:
         rando = randint(1,12)
@@ -50,7 +50,7 @@ def d12(number):
     return dice_roll
 
 # Roll twenty-sided die
-def d20(number):
+def d20(number=1):
     dice_roll = 0
     while number > 0:
         rando = randint(1,20)
@@ -59,7 +59,7 @@ def d20(number):
     return dice_roll
 
 # Roll hundred-sided die
-def d100(number):
+def d100(number=1):
     dice_roll = 0
     while number > 0:
         rando = randint(1,100)
