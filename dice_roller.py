@@ -2,13 +2,13 @@
 # Each die takes a variable indicating how many are being rolled
 # and returns a combined value.
 
-from random import *
+import random
 
 # Roll four-sided die
 def d4(number=1):
     dice_roll = 0
     while number > 0:
-        rando = randint(1,4)
+        rando = random.randint(1,4)
         dice_roll = dice_roll + rando
         number = number - 1
     return dice_roll
@@ -17,7 +17,7 @@ def d4(number=1):
 def d6(number=1):
     dice_roll = 0
     while number > 0:
-        rando = randint(1,6)
+        rando = random.randint(1,6)
         dice_roll = dice_roll + rando
         number = number - 1
     return dice_roll
@@ -26,7 +26,7 @@ def d6(number=1):
 def d8(number=1):
     dice_roll = 0
     while number > 0:
-        rando = randint(1,8)
+        rando = random.randint(1,8)
         dice_roll = dice_roll + rando
         number = number - 1
     return dice_roll
@@ -35,7 +35,7 @@ def d8(number=1):
 def d10(number=1):
     dice_roll = 0
     while number > 0:
-        rando = randint(1,10)
+        rando = random.randint(1,10)
         dice_roll = dice_roll + rando
         number = number - 1
     return dice_roll
@@ -44,7 +44,7 @@ def d10(number=1):
 def d12(number=1):
     dice_roll = 0
     while number > 0:
-        rando = randint(1,12)
+        rando = random.randint(1,12)
         dice_roll = dice_roll + rando
         number = number - 1
     return dice_roll
@@ -53,7 +53,7 @@ def d12(number=1):
 def d20(number=1):
     dice_roll = 0
     while number > 0:
-        rando = randint(1,20)
+        rando = random.randint(1,20)
         dice_roll = dice_roll + rando
         number = number - 1
     return dice_roll
@@ -62,7 +62,7 @@ def d20(number=1):
 def d100(number=1):
     dice_roll = 0
     while number > 0:
-        rando = randint(1,100)
+        rando = random.randint(1,100)
         dice_roll = dice_roll + rando
         number = number - 1
     return dice_roll
