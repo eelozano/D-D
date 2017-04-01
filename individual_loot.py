@@ -13,14 +13,13 @@ challenge_rating = int(input("Please enter a challenge rating between 0 and 20: 
 while challenge_rating < 0 or challenge_rating > 20:
     challenge_rating = int(input("Please enter a challenge rating between 0 and 20: "))
 
-# Rolling a hundred-sided die to determine what on the loot table to return.
-rando_hundred = dice_roller.d100()
 
 # Tables based on DM Guide pg. 136
 
 # Rolling on CR 0 - 4 table
 # if challenge_rating >= 0 and challenge_rating <= 4:
 if 0 <= challenge_rating <= 4:
+    rando_hundred = dice_roller.d100()
     if 1 <= rando_hundred <= 30:
         print("You gained {:,} copper pieces.".format(dice_roller.d6(5)))
     if 31 <= rando_hundred <= 60:
@@ -34,6 +33,7 @@ if 0 <= challenge_rating <= 4:
 
 # Rolling on CR 5-10 table
 if 5 <= challenge_rating <= 10:
+    rando_hundred = dice_roller.d100()
     if 1 <= rando_hundred <= 30:
         print("You gained: {:,} copper pieces and {:,} electrum pieces".format(dice_roller.d6(4)*100,(dice_roller.d6())))
     if 31 <= rando_hundred <= 60:
@@ -47,6 +47,7 @@ if 5 <= challenge_rating <= 10:
 
 # Rolling on CR 11-16 table
 if 11 <= challenge_rating <= 16:
+    rando_hundred = dice_roller.d100()
     if 1 <= rando_hundred <= 20:
         print("You gained {:,} silver pieces and {:,} gold pieces.".format(dice_roller.d6(4)*100,dice_roller.d6()*100))
     if 21 <= rando_hundred <= 35:
@@ -58,6 +59,7 @@ if 11 <= challenge_rating <= 16:
 
 # Rolling on CR 17-20 table
 if 17 <= challenge_rating <= 20:
+    rando_hundred = dice_roller.d100()
     if 1 <= rando_hundred <= 15:
         print("You gained {:,} electrum pieces and {:,} gold pieces.".format(dice_roller.d6(2)*1000,dice_roller.d6(8)*100))
     if 16 <= rando_hundred <= 55:
