@@ -28,59 +28,75 @@ if 0 <= challenge_rating <= 4:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d4(2))))
     if 27 <= rando_hundred <= 36:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Fifty GP Gemstones - {}".format(tables.fifty_gp_gem(dice_roller.d6(2))))
     if 37 <= rando_hundred <= 44:
+        
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Ten GP Gemstones - {}".format(tables.ten_gp_gem(dice_roller.d6(2))))
     if 45 <= rando_hundred <= 52:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d4(2))))
     if 53 <= rando_hundred <= 60:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Fifty GP Gemstones - {}".format(tables.fifty_gp_gem(dice_roller.d6(2))))
     if 61 <= rando_hundred <= 65:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Ten GP Gemstones - {}".format(tables.ten_gp_gem(dice_roller.d6(2))))
     if 66 <= rando_hundred <= 70:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d4(2))))
     if 71 <= rando_hundred <= 75:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Fifty GP Gemstones - {}".format(tables.fifty_gp_gem(dice_roller.d6(2))))
     if 76 <= rando_hundred <= 78:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Ten GP Gemstones - {}".format(tables.ten_gp_gem(dice_roller.d6(2))))
     if 79 <= rando_hundred <= 80:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d4(2))))
     if 81 <= rando_hundred <= 85:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Fifty GP Gemstones - {}".format(tables.fifty_gp_gem(dice_roller.d6(2))))
     if 86 <= rando_hundred <= 92:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d4(2))))
     if 93 <= rando_hundred <= 97:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("TFifty GP Gemstones - {}".format(tables.fifty_gp_gem(dice_roller.d6(2))))
     if 98 <= rando_hundred <= 99:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d4(2))))
     if rando_hundred == 100:
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print("Fifty GP Gemstones - {}".format(tables.fifty_gp_gem(dice_roller.d6(2))))

@@ -9,222 +9,109 @@ import random
 import dice_roller
 import json
 
-
-# Ten GP gem list.  Variable number used to determine how gems to return.
-def ten_gp_gem(number=1):
-    # Initializing variable
+# takes a number and a list and returns the number of items randomly chosen from the list
+def print_returns(number, list):
     return_string = ""
+    while number > 0:
+        # First round does not require 'and' as it would place it before the first item
+        if return_string == "":
+            # randomly picks an item in the list
+            return_string = random.choice(list)
+            number = number - 1
+        else:
+            return_string = "{} and {}".format(return_string, random.choice(list))
+            number = number - 1
+    return return_string
+
+
+def ten_gp_gem(number=1):
     items = ["Azurite", "Banded agate", "Blue quartz", "Eyeagate", "Hematite",
              "Lapis lazuli", "Malachite", "Moss agate", "Obsidian", "Tiger eye",
              "Turquoise"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def fifty_gp_gem(number=1):
-    return_string = ""
     items = ["Bloodstone", "Carnelian", "Chalcedony", "Chrysoprase", "Citrine", "Jasper", "Moonstone", "Onyx", "Quartz",
              "Sardonyx", "Star rose quartz", "Zircon"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def one_hundred_gp_gem(number=1):
-    return_string = ""
     items = ["Amber", "Amethyst", "Chrysoberyl", "Coral", "Garnet", "Jade", "Jet", "Pearl", "Spinel", "Tourmaline"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def five_hundred_gp_gem(number=1):
-    return_string = ""
     items = ["Alexandrite", "Aquamarine", "Black pearl", "Blue spinel", "Peridot", "Topaz"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def one_thousand_gp_gem(number=1):
-    return_string = ""
     items = ["Black opal", "Blue sapphire", "Emerald", "Fire opal", "Opal", "Star ruby", "Star sapphire",
              "Yellow sapphire"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def five_thousand_gem(number=1):
-    return_string = ""
     items = ["Black sapphire", "Diamond", "Jacinth", "Ruby"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def twenty_five_gp_art(number=1):
-    return_string = ""
     items = ["Silver ewer", "Carved bone statuette", "Small gold bracelet", "Cloth-of-gold vestments",
              "Black velvet mask stitched with silver thread", "Copper chalice with silver filigree",
              "Pair of engraved bone dice", "Small mirror set in a painted wooden frame",
              "Embroidered silk handkerchief", "Gold locket with a painted portrait inside"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def two_hundred_fifty_gp_art(number=1):
-    return_string = ""
     items = ["Gold ring set with bloodstones", "Carved ivory statuette", "Large gold bracelet",
              "Silver necklace with a gemstone pendant", "Bronze crown", "Silk robe with gold embroidery",
              "Large well-made tapestry", "Brass mug with jade inlay", "Box of turquoise animal figurines",
              "Gold bird cage with electrum filigree"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def seven_hundred_fifty_gp_art(number=1):
-    return_string = ""
     items = ["Silver chalice set with moonstones", "Silver-plated steellongsword with jet set in hilt",
              "Carved harp of exotic wood with ivory inlay and zircon gems", "Small gold idol",
              "Gold dragon comb set with red garnets as eyes",
              "Bottle stopper cork embossed with gold leaf and set with amethysts",
              "Ceremonial electrum dagger with a black pearl in the pommel", "Silver and gold brooch",
              "Obsidian statuette with gold fittings and inlay", "Painted gold war mask"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def two_thousand_five_hundred_gp_art(number=1):
-    return_string = ""
     items = ["Fine gold chain set with a fire opal", "Old masterpiece painting",
              "Embroidered silk and velvet mantle set with numerous moonstones", "Platinum bracelet set with a sapphire",
              "Embroidered glove set with jewel chips", "Jeweled anklet", "Gold music box",
              "Gold circlet set with four aquamarines", "Eye patch with a mock eye set in blue sapphire and moonstone",
              "Eye patch with a mock eye set in blue sapphire and moonstone"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = return_string + " and " + random.choice(items)
-            number = number - 1
-    return return_string
+    return print_returns(number, items)
 
 
 def seven_thousand_five_hundred_gp_art(number=1):
-    return_string = ""
     items = ["Jeweled gold crown", "Jeweled platinum ring", "Small gold statuette set with rubies",
              "Gold cup set with emeralds", "Gold jewelry box with platinum filigree",
              "Painted gold child's sarcophagus", "jade game board with solid gold playing pieces",
              "Bejeweled ivory drinking horn with gold filigree"]
-    # begin loop to create list of gems to return
-    while number > 0:
-        # First round does not require 'and' as it would place it before the first item
-        if return_string == "":
-            # randomly picks an item in the list
-            return_string = random.choice(items)
-            number = number - 1
-        else:
-            return_string = "{} and {}".format(return_string, random.choice(items))
-            number = number - 1
-    return return_string
+    return print_returns(number,items)
 
 
+print(seven_thousand_five_hundred_gp_art(5))
+
+# Pull a random magic spell of input level from a json file of all SRD spells
 def magic_spell(inp_level):
-    # This pulls all the 5E SRD Spells from a JSON file
     spell_list = json.loads(open('5e-SRD-Spells.json').read())
-    # Temporary array to be iterated into when a spell is requested
     temp_array = []
-    # Iterate through each object in spell file and add the appropriate objects
-    # based on level to temp_array
     for spell_object in spell_list:
         if spell_object['level'] == inp_level:
             temp_array.append(spell_object)
-    # Find length of array to determine what values to randomly choose from
     array_length = len(temp_array)
-    # Return a random number in range
     random_number = random.randint(0, array_length - 1)
-    # return random spell of appropriate leverl
     return (temp_array[random_number])['name']
 
 
