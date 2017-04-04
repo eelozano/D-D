@@ -101,8 +101,6 @@ def seven_thousand_five_hundred_gp_art(number=1):
     return print_returns(number,items)
 
 
-print(seven_thousand_five_hundred_gp_art(5))
-
 # Pull a random magic spell of input level from a json file of all SRD spells
 def magic_spell(inp_level):
     spell_list = json.loads(open('5e-SRD-Spells.json').read())
@@ -114,6 +112,18 @@ def magic_spell(inp_level):
     random_number = random.randint(0, array_length - 1)
     return (temp_array[random_number])['name']
 
+# Formatter for magic table output
+def print_magic_table(list):
+    number = len(list)
+    return_string = ""
+    while number > 0:
+        if return_string == "":
+            return_string = list.pop()
+            number = number - 1
+        else:
+            return_string = "{} and {}".format(return_string, list.pop())
+            number = number - 1
+    return return_string
 
 def magic_table_a():
     rando_hundred = dice_roller.d100()

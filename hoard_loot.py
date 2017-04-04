@@ -10,6 +10,8 @@ challenge_rating = int(input("\n\nPlease enter a challenge rating between 0 and 
 while challenge_rating < 0 or challenge_rating > 4:
     challenge_rating = int(input("Please enter a challenge rating between 0 and 4: "))
 
+
+
 # Rolling on CR 0 - 4 table
 # if challenge_rating >= 0 and challenge_rating <= 4:
 if 0 <= challenge_rating <= 4:
