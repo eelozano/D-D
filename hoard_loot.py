@@ -37,10 +37,18 @@ if 0 <= challenge_rating <= 4:
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
         print("Fifty GP Gemstones - {}".format(tables.fifty_gp_gem(dice_roller.d6(2))))
     if 37 <= rando_hundred <= 44:
-        
+        magic_loot_roll = dice_roller.d6()
+        magic_list = []
+
+        while magic_loot_roll > 0:
+            magic_list.pop(tables.magic_table_a())
+            magic_loot_roll = magic_loot_roll - 1
+
         print("Your hoard includes the following!")
         print(
             "{:,} Copper Pieces, {:,} Silver Pieces, and {:,} Gold Pieces".format(dice_roller.d6(6) * 100, dice_roller.d6(3) * 100, dice_roller.d6(2) * 10))
+        print(tables.print_magic_table(magic_list))
+
         print("Ten GP Gemstones - {}".format(tables.ten_gp_gem(dice_roller.d6(2))))
     if 45 <= rando_hundred <= 52:
         print("Your hoard includes the following!")
