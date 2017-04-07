@@ -639,42 +639,268 @@ def magic_table_g():
 
 def magic_table_h():
     rando_hundred = dice_roller.d100()
-    if 1 <= rando_hundred <= 50:
-        return "Potion of Healing"
-    if 51 <= rando_hundred <= 60:
-        return "SPELL SCROLL (CANTRIP)"
-    if 61 <= rando_hundred <= 70:
-        return "Potion of Climbing"
-    if 71 <= rando_hundred <= 90:
-        return "SPELL SCROLL (1st LEVEL)"
-    if 91 <= rando_hundred <= 94:
-        return "SPELL SCROLL (2nd LEVEL)"
-    if 95 <= rando_hundred <= 98:
-        return "Potion of Greater Healing"
+    if 1 <= rando_hundred <= 10:
+        return "Weapon +3"
+    if 11 <= rando_hundred <= 12:
+        return "Amulet of the Planes"
+    if 13 <= rando_hundred <= 14:
+        return "Carpet of Flying"
+    if 15 <= rando_hundred <= 16:
+        return "Crystal Ball (Very Rare Version)"
+    if 17 <= rando_hundred <= 18:
+        return "Ring of Regeneration"
+    if 19 <= rando_hundred <= 20:
+        return "Ring of Shooting Stars"
+    if 21 <= rando_hundred <= 22:
+        return "Ring of Telekinesis"
+    if 23 <= rando_hundred <= 24:
+        return "Robe of Scintillating Colors"
+    if 25 <= rando_hundred <= 26:
+        return "Robe of Stars"
+    if 27 <= rando_hundred <= 28:
+        return "Rod of Absorbtion"
+    if 29 <= rando_hundred <= 30:
+        return "Rod of Alertness"
+    if 31 <= rando_hundred <= 32:
+        return "Rod of Security"
+    if 33 <= rando_hundred <= 34:
+        return "Rod of the Pact Keeper, +3"
+    if 35 <= rando_hundred <= 36:
+        return "Scimitar of Speed"
+    if 37 <= rando_hundred <= 38:
+        return "Shield, +3"
+    if 39 <= rando_hundred <= 40:
+        return "Staff of Fire"
+    if 41 <= rando_hundred <= 42:
+        return "Staff of Frost"
+    if 43 <= rando_hundred <= 44:
+        return "Staff of Power"
+    if 45 <= rando_hundred <= 46:
+        return "Staff of Striking"
+    if 47 <= rando_hundred <= 48:
+        return "Staff of Thunder and Lightning"
+    if 49 <= rando_hundred <= 50:
+        return "Sword of Sharpness"
+    if 51 <= rando_hundred <= 52:
+        return "Wand of Polymorph"
+    if 53 <= rando_hundred <= 54:
+        return "Wand of the War Mage, +3"
+    if rando_hundred == 55:
+        return "Adamantine Armor (Half Plate)"
+    if rando_hundred == 56:
+        return "Adamantine Armor (Plate)"
+    if rando_hundred == 57:
+        return "Animated Shield"
+    if rando_hundred == 58:
+        return "Belt of Fire Giant Strength"
+    if rando_hundred == 59:
+        return "Belt of Frost (or Stone) Giant Strength"
+    if rando_hundred == 60:
+        return "Armor, +1 Breastplate"
+    if rando_hundred == 61:
+        return "Armor of Resistance (Breastplate)"
+    if rando_hundred == 62:
+        return "Candle of Invocation"
+    if rando_hundred == 63:
+        return "Armor, +2 Chain Mail"
+    if rando_hundred == 64:
+        return "Armor, +2 Chain Shirt"
+    if rando_hundred == 65:
+        return "Cloak of Arachnida"
+    if rando_hundred == 66:
+        return "Dancing Sword"
+    if rando_hundred == 67:
+        return "Demon Armor"
+    if rando_hundred == 68:
+        return "Dragon Scale Mail"
+    if rando_hundred == 69:
+        return "Dwarven Plate"
+    if rando_hundred == 70:
+        return "Dwarven Thrower"
+    if rando_hundred == 71:
+        return "Efreeti Bottle"
+    if rando_hundred == 72:
+        return "Figurine of Wondrous Power (Obsidian Steed)"
+    if rando_hundred == 73:
+        return "Frost Brand"
+    if rando_hundred == 74:
+        return "Helm of Brilliance"
+    if rando_hundred == 75:
+        return "Horn of Valhalla (Bronze)"
+    if rando_hundred == 76:
+        return "Instrument of the Bards (Anstruth Harp)"
+    if rando_hundred == 77:
+        return "Loun Stone (Absorption)"
+    if rando_hundred == 78:
+        return "Loun Stone (Agility)"
+    if rando_hundred == 79:
+        return "Loun Stone (Fortitude)"
+    if rando_hundred == 80:
+        return "Loun Stone (Insight)"
+    if rando_hundred == 81:
+        return "Loun Stone (Intellect)"
+    if rando_hundred == 82:
+        return "Loun Stone (Leadership)"
+    if rando_hundred == 83:
+        return "Loun Stone (Strength)"
+    if rando_hundred == 84:
+        return "Armor, +2 Leather"
+    if rando_hundred == 85:
+        return "Manual of Bodily Health"
+    if rando_hundred == 86:
+        return "Manual of Gainful Exercise"
+    if rando_hundred == 87:
+        return "Manual of Golems"
+    if rando_hundred == 88:
+        return "Manual of Quickness of Action"
+    if rando_hundred == 89:
+        return "Mirror of Life Trapping"
+    if rando_hundred == 90:
+        return "Nine Lives Stealer"
+    if rando_hundred == 91:
+        return "Oathbow"
+    if rando_hundred == 92:
+        return "Armor, +2 Scale Mail"
+    if rando_hundred == 93:
+        return "Spellguard Shield"
+    if rando_hundred == 94:
+        return "Armor, +1 Splint"
+    if rando_hundred == 95:
+        return "Armor of Resistance (Splint)"
+    if rando_hundred == 96:
+        return "Armor, +1 Studded Leather"
+    if rando_hundred == 97:
+        return "Armor of Resistance (Studded Leather)"
+    if rando_hundred == 98:
+        return "Tome of Clear Thought"
     if rando_hundred == 99:
-        return "Bag of Holding"
+        return "Tome of Leadership and Influence"
     if rando_hundred == 100:
-        return "Driftglobe"
+        return "Tome of Understanding"
 
 
 def magic_table_i():
     rando_hundred = dice_roller.d100()
-    if 1 <= rando_hundred <= 50:
-        return "Potion of Healing"
-    if 51 <= rando_hundred <= 60:
-        return "SPELL SCROLL (CANTRIP)"
-    if 61 <= rando_hundred <= 70:
-        return "Potion of Climbing"
-    if 71 <= rando_hundred <= 90:
-        return "SPELL SCROLL (1st LEVEL)"
-    if 91 <= rando_hundred <= 94:
-        return "SPELL SCROLL (2nd LEVEL)"
-    if 95 <= rando_hundred <= 98:
-        return "Potion of Greater Healing"
+    if 1 <= rando_hundred <= 5:
+        return "Defender"
+    if 6 <= rando_hundred <= 10:
+        return "Hammer of Thunderbolts"
+    if 11 <= rando_hundred <= 15:
+        return "Luck Blade"
+    if 16 <= rando_hundred <= 20:
+        return "Sword of Answering"
+    if 21 <= rando_hundred <= 23:
+        return "Holy Avenger"
+    if 24 <= rando_hundred <= 26:
+        return "Ring of Djinni Summoning"
+    if 27 <= rando_hundred <= 29:
+        return "Ring of Invisibility"
+    if 30 <= rando_hundred <= 32:
+        return "Ring of Spell Turning"
+    if 33 <= rando_hundred <= 35:
+        return "Rod of Lordly Might"
+    if 36 <= rando_hundred <= 38:
+        return "Staff of the Magi"
+    if 39 <= rando_hundred <= 41:
+        return "Vorpal Sword"
+    if 42 <= rando_hundred <= 43:
+        return "Belt of Cloud Giant Strength"
+    if 44 <= rando_hundred <= 45:
+        return "Armor, +2 Breastplate"
+    if 46 <= rando_hundred <= 47:
+        return "Armor, +3 Chain Mail"
+    if 48 <= rando_hundred <= 49:
+        return "Armor, +3 Chain Shirt"
+    if 50 <= rando_hundred <= 51:
+        return "Cloak of Invisibility"
+    if 52 <= rando_hundred <= 53:
+        return "Crystal Ball (Legendary Version)"
+    if 54 <= rando_hundred <= 55:
+        return "Armor, +1 Half Plate"
+    if 56 <= rando_hundred <= 57:
+        return "Iron Flask"
+    if 58 <= rando_hundred <= 59:
+        return "Armor, +3 Leather"
+    if 60 <= rando_hundred <= 61:
+        return "Armor, +1 Plate"
+    if 62 <= rando_hundred <= 63:
+        return "Robe of the Archmagi"
+    if 64 <= rando_hundred <= 65:
+        return "Rod of Ressurection"
+    if 66 <= rando_hundred <= 67:
+        return "Armor, +1 Scale Mail"
+    if 68 <= rando_hundred <= 69:
+        return "Scarab of Protection"
+    if 70 <= rando_hundred <= 71:
+        return "Armor, +2 Splint"
+    if 72 <= rando_hundred <= 73:
+        return "Armor, +2 Studded Leather"
+    if 74 <= rando_hundred <= 75:
+        return "Well of Many Worlds"
+    if rando_hundred == 76:
+        dice_roll = dice_roller.d12()
+        if 1 <= dice_roll <= 2:
+            return "Armor, +2 Half Plate"
+        if 3 <= dice_roll <= 4:
+            return "Armor, +2 Plate"
+        if 5 <= dice_roll <= 6:
+            return "Armor, +3 Studded Leather"
+        if 7 <= dice_roll <= 8:
+            return "Armor, +3 Breastplate"
+        if 9 <= dice_roll <= 10:
+            return "Armor, +3 Splint"
+        if dice_roll = 11:
+            return "Armor, +3 Half Plate"
+        if dice_roll = 12:
+            return "Armor, +3 Plate"
+    if rando_hundred == 77:
+        return "Apparatus of Kwalish"
+    if rando_hundred == 78:
+        return "Armor of Invulnerability"
+    if rando_hundred == 79:
+        return "Belt of Storm Giant Strength"
+    if rando_hundred == 80:
+        return "Cubic Gate"
+    if rando_hundred == 81:
+        return "Deck of Many Things"
+    if rando_hundred == 82:
+        return "Efreeti Chain"
+    if rando_hundred == 83:
+        return "Armor of Resistance (Half Plate)"
+    if rando_hundred == 84:
+        return "Horn of Valhalla (Iron)"
+    if rando_hundred == 85:
+        return "Instrument of the Bards (Ollamh Harp)"
+    if rando_hundred == 86:
+        return "loun stone (greater absorption)"
+    if rando_hundred == 87:
+        return "loun stone (mastery)"
+    if rando_hundred == 88:
+        return "loun stone (regeneration)"
+    if rando_hundred == 89:
+        return "Plate Armor of Etherealness"
+    if rando_hundred == 90:
+        return "Plate Armor of Resistance"
+    if rando_hundred == 91:
+        return "Ring of Air Elemental Command"
+    if rando_hundred == 92:
+        return "Ring of Earth Elemental Command"
+    if rando_hundred == 93:
+        return "Ring of Fire Elemental Command"
+    if rando_hundred == 94:
+        return "Ring of Three Wishes"
+    if rando_hundred == 95:
+        return "Ring of Water Elemental Command"
+    if rando_hundred == 96:
+        return "Sphere of Annihilation"
+    if rando_hundred == 97:
+        return "Talisman of Pure Good"
+    if rando_hundred == 98:
+        return "Talisman of the Sphere"
     if rando_hundred == 99:
-        return "Bag of Holding"
+        return "Talisman of Ultimate Evil"
     if rando_hundred == 100:
-        return "Driftglobe"
+        return "Tome of the Stilled Tongue"
 
 # Various table tests
 
