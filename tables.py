@@ -849,9 +849,9 @@ def magic_table_i():
             return "Armor, +3 Breastplate"
         if 9 <= dice_roll <= 10:
             return "Armor, +3 Splint"
-        if dice_roll = 11:
+        if dice_roll == 11:
             return "Armor, +3 Half Plate"
-        if dice_roll = 12:
+        if dice_roll == 12:
             return "Armor, +3 Plate"
     if rando_hundred == 77:
         return "Apparatus of Kwalish"
@@ -901,28 +901,3 @@ def magic_table_i():
         return "Talisman of Ultimate Evil"
     if rando_hundred == 100:
         return "Tome of the Stilled Tongue"
-
-# Various table tests
-
-# print("Printing 10 gp gems")
-# print(ten_gp_gem(3))
-# print("Printing 50 gp gems")
-# print(fifty_gp_gem(3))
-# print("Printing 100 gp gems")
-# print(one_hundred_gp_gem(3))
-# print("Printing 500 gp gems")
-# print(five_hundred_gp_gem(3))
-# print("Printing 1000 gp gems")
-# print(one_thousand_gp_gem(3))
-# print("Printing 5000 gp gems")
-# print(five_thousand_gem(3))
-# print("Printing 25 gp art")
-# print(twenty_five_gp_art(3))
-# print("Printing 250 gp art")
-# print(two_hundred_fifty_gp_art(3))
-# print("Printing 750 gp art")
-# print(seven_hundred_fifty_gp_art(3))
-# print("Printing 2500 gp art")
-# print(two_thousand_five_hundred_gp_art(3))
-# print("Printing 7500 gp art")
-# print(seven_thousand_five_hundred_gp_art(3))
