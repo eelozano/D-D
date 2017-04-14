@@ -174,6 +174,40 @@ if 5 <= challenge_rating <= 10:
             magic_list.append(tables.magic_table_a())
             magic_loot_roll = magic_loot_roll - 1
         print(tables.print_magic_table(magic_list))
+    if 33 <= rando_hundred <= 36:
+        five_ten_print()
+        print("Fifty GP Gem - {}".format(tables.fifty_gp_gem(dice_roller.d6(3))))
+        magic_loot_roll = dice_roller.d6()
+        magic_list = []
+        while magic_loot_roll > 0:
+            magic_list.append(tables.magic_table_a())
+            magic_loot_roll = magic_loot_roll - 1
+        print(tables.print_magic_table(magic_list))
+    if 37 <= rando_hundred <= 40:
+        five_ten_print()
+
+    if 41 <= rando_hundred <= 44:
+        five_ten_print()
+
+    if 45 <= rando_hundred <= 49:
+        five_ten_print()
+
+    if 50 <= rando_hundred <= 54:
+        five_ten_print()
+
+    if 55 <= rando_hundred <= 59:
+        five_ten_print()
+
+    if 60 <= rando_hundred <= 63:
+        five_ten_print()
+
+    if 64 <= rando_hundred <= 66:
+        five_ten_print()
+
+    if 67 <= rando_hundred <= 69:
+        five_ten_print()
+
+
 
 
 #if 11 <= challenge_rating <= 16:
