@@ -125,24 +125,27 @@ def print_magic_table(list):
             number = number - 1
     return return_string
 
-def magic_table_a():
-    rando_hundred = dice_roller.d100()
-    if 1 <= rando_hundred <= 50:
-        return "Potion of Healing"
-    if 51 <= rando_hundred <= 60:
-        return "Spell Scroll - {} - Cantrip".format(magic_spell('Cantrip'))
-    if 61 <= rando_hundred <= 70:
-        return "Potion of Climbing"
-    if 71 <= rando_hundred <= 90:
-        return "Spell Scroll - {} - 1st Level".format(magic_spell('1st-level'))
-    if 91 <= rando_hundred <= 94:
-        return "Spell Scroll - {} - 2nd Level".format(magic_spell('2nd-level'))
-    if 95 <= rando_hundred <= 98:
-        return "Potion of Greater Healing"
-    if rando_hundred == 99:
-        return "Bag of Holding"
-    if rando_hundred == 100:
-        return "Driftglobe"
+def magic_table_a(number=1):
+    temp_array = []
+    while number > 0:
+        rando_hundred = dice_roller.d100()
+        if 1 <= rando_hundred <= 50:
+            temp_array.append("Potion of Healing")
+        if 51 <= rando_hundred <= 60:
+            temp_array.append("Spell Scroll - {} - Cantrip".format(magic_spell('Cantrip')))
+        if 61 <= rando_hundred <= 70:
+            temp_array.append("Potion of Climbing")
+        if 71 <= rando_hundred <= 90:
+            temp_array.append("Spell Scroll - {} - 1st Level".format(magic_spell('1st-level')))
+        if 91 <= rando_hundred <= 94:
+            temp_array.append("Spell Scroll - {} - 2nd Level".format(magic_spell('2nd-level')))
+        if 95 <= rando_hundred <= 98:
+            temp_array.append("Potion of Greater Healing")
+        if rando_hundred == 99:
+            temp_array.append("Bag of Holding")
+        if rando_hundred == 100:
+            temp_array.append("Driftglobe")
+    return temp_array
 
 
 def magic_table_b():

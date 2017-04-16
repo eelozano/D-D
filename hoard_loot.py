@@ -24,6 +24,14 @@ def five_ten_print():
             dice_roller.d6(2)*100,dice_roller.d6(2)*1000,dice_roller.d6(6)*100,dice_roller.d6(3)*10)
     )
 
+def magic_loot_roll_print(dice_roll, magic_table):
+    magic_loot_roll = dice_roller.d4()
+    magic_list = []
+    while magic_loot_roll > 0:
+        magic_list.append(tables.magic_table_b())
+        magic_loot_roll = magic_loot_roll - 1
+    print(tables.print_magic_table(magic_list))
+
 
 
 # Rolling on CR 0 - 4 table
@@ -153,18 +161,23 @@ if 5 <= challenge_rating <= 10:
 
     if 1 <= rando_hundred <= 4:
         five_ten_print()
+
     if 5 <= rando_hundred <= 10:
         five_ten_print()
         print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d6(2))))
+
     if 11 <= rando_hundred <= 16:
         five_ten_print()
         print("Fifty GP Gems - {}".format(tables.fifty_gp_gem(dice_roller.d6(3))))
+
     if 17 <= rando_hundred <= 22:
         five_ten_print()
         print("One-Hundred GP Gems - {}".format(tables.one_hundred_gp_gem(dice_roller.d6(3))))
+
     if 23 <= rando_hundred <= 28:
         five_ten_print()
         print("Two-Hundred Fifty GP Art - {}".format(tables.two_hundred_fifty_gp_art(dice_roller.d4(2))))
+
     if 29 <= rando_hundred <= 32:
         five_ten_print()
         print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d4(2))))
@@ -174,6 +187,7 @@ if 5 <= challenge_rating <= 10:
             magic_list.append(tables.magic_table_a())
             magic_loot_roll = magic_loot_roll - 1
         print(tables.print_magic_table(magic_list))
+
     if 33 <= rando_hundred <= 36:
         five_ten_print()
         print("Fifty GP Gem - {}".format(tables.fifty_gp_gem(dice_roller.d6(3))))
@@ -183,29 +197,46 @@ if 5 <= challenge_rating <= 10:
             magic_list.append(tables.magic_table_a())
             magic_loot_roll = magic_loot_roll - 1
         print(tables.print_magic_table(magic_list))
+
     if 37 <= rando_hundred <= 40:
         five_ten_print()
+        print("One Hundred GP Gem - {}".format(tables.one_hundred_gp_gem(dice_roller.d6(3))))
+        magic_loot_roll = dice_roller.d6()
+        magic_list = []
+        while magic_loot_roll > 0:
+            magic_list.append(tables.magic_table_a())
+            magic_loot_roll = magic_loot_roll - 1
+        print(tables.print_magic_table(magic_list))
 
     if 41 <= rando_hundred <= 44:
         five_ten_print()
+        print("Two-Hundred Fifty GP Art - {}".format(tables.two_hundred_fifty_gp_art(dice_roller.d4(2))))
+        magic_loot_roll = dice_roller.d6()
+        magic_list = []
+        while magic_loot_roll > 0:
+            magic_list.append(tables.magic_table_a())
+            magic_loot_roll = magic_loot_roll - 1
+        print(tables.print_magic_table(magic_list))
 
     if 45 <= rando_hundred <= 49:
         five_ten_print()
+        print("Twenty-Five GP Art - {}".format(tables.twenty_five_gp_art(dice_roller.d4(2))))
+        magic_loot_roll = dice_roller.d4()
+        magic_list = []
+        while magic_loot_roll > 0:
+            magic_list.append(tables.magic_table_b())
+            magic_loot_roll = magic_loot_roll - 1
+        print(tables.print_magic_table(magic_list))
 
     if 50 <= rando_hundred <= 54:
         five_ten_print()
-
-    if 55 <= rando_hundred <= 59:
-        five_ten_print()
-
-    if 60 <= rando_hundred <= 63:
-        five_ten_print()
-
-    if 64 <= rando_hundred <= 66:
-        five_ten_print()
-
-    if 67 <= rando_hundred <= 69:
-        five_ten_print()
+        print("Fifty GP Gem - {}".format(tables.fifty_gp_gem(dice_roller.d6(3))))
+        magic_loot_roll = dice_roller.d4()
+        magic_list = []
+        while magic_loot_roll > 0:
+            magic_list.append(tables.magic_table_b())
+            magic_loot_roll = magic_loot_roll - 1
+        print(tables.print_magic_table(magic_list))
 
 
 
