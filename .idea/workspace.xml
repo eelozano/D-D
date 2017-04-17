@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2d1eb31e-5eec-46f0-a42c-b407050e8ac4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dice_roller.py" afterPath="$PROJECT_DIR$/dice_roller.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hoard_loot.py" afterPath="$PROJECT_DIR$/hoard_loot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables.py" afterPath="$PROJECT_DIR$/tables.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tables.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tables.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="1360">
+              <caret line="96" column="80" lean-forward="false" selection-start-line="96" selection-start-column="80" selection-end-line="96" selection-end-column="80" />
               <folding>
                 <element signature="e#404#417#0" expanded="true" />
               </folding>
@@ -32,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hoard_loot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hoard_loot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hoard_loot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2732">
-              <caret line="205" column="59" lean-forward="true" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="59" />
+              <caret line="205" column="59" lean-forward="false" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="59" />
               <folding>
                 <element signature="e#71#84#0" expanded="true" />
               </folding>
@@ -67,9 +65,11 @@
     <findStrings>
       <find>level</find>
       <find>len</find>
+      <find>list</find>
     </findStrings>
     <replaceStrings>
       <replace>temp_array.append(</replace>
+      <replace>input_list</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -86,8 +86,8 @@
         <option value="$PROJECT_DIR$/tables_oop.py" />
         <option value="$PROJECT_DIR$/magic_table.py" />
         <option value="$PROJECT_DIR$/dice_roller.py" />
-        <option value="$PROJECT_DIR$/tables.py" />
         <option value="$PROJECT_DIR$/hoard_loot.py" />
+        <option value="$PROJECT_DIR$/tables.py" />
       </list>
     </option>
   </component>
@@ -783,22 +783,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tables.py">
+    <entry file="file://$PROJECT_DIR$/hoard_loot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="2732">
+          <caret line="205" column="59" lean-forward="false" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="59" />
           <folding>
-            <element signature="e#404#417#0" expanded="true" />
+            <element signature="e#71#84#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hoard_loot.py">
+    <entry file="file://$PROJECT_DIR$/tables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2732">
-          <caret line="205" column="59" lean-forward="true" selection-start-line="205" selection-start-column="59" selection-end-line="205" selection-end-column="59" />
+        <state relative-caret-position="1360">
+          <caret line="96" column="80" lean-forward="false" selection-start-line="96" selection-start-column="80" selection-end-line="96" selection-end-column="80" />
           <folding>
-            <element signature="e#71#84#0" expanded="true" />
+            <element signature="e#404#417#0" expanded="true" />
           </folding>
         </state>
       </provider>
