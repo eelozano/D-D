@@ -5,10 +5,10 @@ import dice_roller
 
 # Prompting for challenge rating (determines what tables to pull from).
 # Challenge rating (CR) determines which which loot table to use.
-challenge_rating = int(input("\n\nPlease enter a challenge rating between 0 and 10: "))
+challenge_rating = int(input("\n\nPlease enter a challenge rating between 0 and 16: "))
 # Simple check of the input
-while challenge_rating < 0 or challenge_rating > 10:
-    challenge_rating = int(input("Please enter a challenge rating between 0 and 10: "))
+while challenge_rating < 0 or challenge_rating > 16:
+    challenge_rating = int(input("Please enter a challenge rating between 0 and 16: "))
 
 # Coin loot for CR 0 - 4
 def zero_four_print():
@@ -22,8 +22,14 @@ def five_ten_print():
     print("Your hoard includes the following!")
     print(
         "{:,} Copper Pieces, {:,} Silver Pieces, {:,} Gold Pieces, and {:,} Platinum Pieces".format(
-            dice_roller.d6(2)*100,dice_roller.d6(2)*1000,dice_roller.d6(6)*100,dice_roller.d6(3)*10)
+            dice_roller.d6(2)*100,dice_roller.d6(2)*1000,dice_roller.d6(6)*100,dice_roller.d6(3)*10))
+
+def elven_sixteen_print():
+    print("Your hoard includes the following!")
+    print(
+        "{:,} Gold Pieces and {:,} Platinum Pieces".format(dice_roller.d6(4)*1000,dice_roller.d6(5)*100)
     )
+
 # Rolling on CR 0 - 4 table
 if 0 <= challenge_rating <= 4:
     rando_hundred = dice_roller.d100()
@@ -91,6 +97,7 @@ if 0 <= challenge_rating <= 4:
         print(tables.print_returns(tables.fifty_gp_gem(dice_roller.d6(2))))
         print(tables.print_returns(tables.magic_table_g()))
 
+# Rolling on CR 5-10
 if 5 <= challenge_rating <= 10:
     rando_hundred = dice_roller.d100()
     if 1 <= rando_hundred <= 4:
@@ -206,6 +213,35 @@ if 5 <= challenge_rating <= 10:
         print(tables.print_returns(tables.magic_table_h()))
 
 
-            #if 11 <= challenge_rating <= 16:
+if 11 <= challenge_rating <= 16:
+    #rando_hundred = dice_roller.d100()
+    rando_hundred = dice_roller.dx(26)
+    if 1 <= rando_hundred <= 3:
+        elven_sixteen_print()
+    if 4 <= rando_hundred <= 6:
+        elven_sixteen_print()
+        print(tables.print_returns(tables.two_hundred_fifty_gp_art(dice_roller.d4(2))))
+    if 7 <= rando_hundred <= 9:
+        elven_sixteen_print()
+        print(tables.print_returns(tables.seven_hundred_fifty_gp_art(dice_roller.d4(2))))
+    if 10 <= rando_hundred <= 12:
+        elven_sixteen_print()
+        print(tables.print_returns(tables.five_hundred_gp_gem(dice_roller.d6(3))))
+    if 13 <= rando_hundred <= 15:
+        elven_sixteen_print()
+        print(tables.print_returns(tables.one_thousand_gp_gem(dice_roller.d6(3))))
+    if 16 <= rando_hundred <= 19:
+        elven_sixteen_print()
+        print(tables.print_returns(tables.two_hundred_fifty_gp_art(dice_roller.d4(2))))
+        print(tables.print_returns(tables.magic_table_a(dice_roller.d4())))
+    if 20 <= rando_hundred <= 23:
+        elven_sixteen_print()
+        print(tables.print_returns(tables.seven_hundred_fifty_gp_art(dice_roller.d4(2))))
+        print(tables.print_returns(tables.magic_table_a(dice_roller.d4())))
+    if 24 <= rando_hundred <= 26:
+        elven_sixteen_print()
+        print(tables.print_returns(tables.five_hundred_gp_gem(dice_roller.d6(3))))
+        print(tables.print_returns(tables.magic_table_a(dice_roller.d4())))
+
 
 #if 17 <= challenge_rating <= 20:
