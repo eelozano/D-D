@@ -10,25 +10,25 @@ import dice_roller
 import json
 
 # Prints a human readable list
-def print_returns(list):
+def print_returns(input_list):
     return_string = ""
-    length = len(list)
+    length = len(input_list)
     if length == 1:
-        return_string ="{}".format(list[0])
+        return_string ="{}".format(input_list[0])
     elif length == 2:
-        print("{} and {}".format(list[0],list[1]))
+        print("{} and {}".format(input_list[0],input_list[1]))
     else:
         while length > 1:
-            return_string = return_string + "{}, ".format(list[length-1])
+            return_string = return_string + "{}, ".format(input_list[length-1])
             length -= 1
-        return_string = return_string + "and {}".format(list[0])
+        return_string = return_string + "and {}".format(input_list[0])
     return return_string
 
 
-def random_list_appender(list, number):
+def random_list_appender(input_list, number):
     return_list = []
     while number > 0:
-        return_list.append(random.choice(list))
+        return_list.append(random.choice(input_list))
         number -= 1
     return return_list
 

@@ -66,3 +66,11 @@ def d100(number=1):
         dice_roll = dice_roll + rando
         number = number - 1
     return dice_roll
+
+def dx(sides, number=1):
+    dice_roll = 0
+    while number > 0:
+        rando = random.randint(1,sides)
+        dice_roll = dice_roll + rando
+        number -= 1
+    return dice_roll
