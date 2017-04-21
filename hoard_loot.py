@@ -1,14 +1,21 @@
-# This will eventually be the hoard equivalent to individual_loot.py3
+# A loot roller for the hoard tables in D&D 5th Edition
 
 import tables
 import dice_roller
 
 # Prompting for challenge rating (determines what tables to pull from).
 # Challenge rating (CR) determines which which loot table to use.
-challenge_rating = int(input("\n\nPlease enter a challenge rating between 0 and 16: "))
-# Simple check of the input
-while challenge_rating < 0 or challenge_rating > 16:
-    challenge_rating = int(input("Please enter a challenge rating between 0 and 16: "))
+# Catches incorrect input
+while True:
+    try:
+        challenge_rating = int(input("\n\nPlease enter a challenge rating between 0 and 20: "))
+        if challenge_rating < 0 or challenge_rating > 20:
+            raise ValueError()
+        else:
+            break
+    except ValueError:
+        print("PLEASE ENTER A VALUE BETWEEN ZERO (0) AND TWENTY (20) INCLUSIVE\n")
+        pass
 
 # Coin loot for CR 0 - 4
 def zero_four_print():
@@ -21,14 +28,21 @@ def zero_four_print():
 def five_ten_print():
     print("Your hoard includes the following!")
     print(
-        "{:,} Copper Pieces, {:,} Silver Pieces, {:,} Gold Pieces, and {:,} Platinum Pieces".format(
-            dice_roller.d6(2)*100,dice_roller.d6(2)*1000,dice_roller.d6(6)*100,dice_roller.d6(3)*10))
+        "{:,} Copper Pieces, {:,} Silver Pieces, {:,} Gold Pieces, and {:,} Platinum Pieces".
+            format(dice_roller.d6(2)*100,dice_roller.d6(2)*1000,
+                   dice_roller.d6(6)*100,dice_roller.d6(3)*10))
 
 def eleven_sixteen_print():
     print("Your hoard includes the following!")
     print(
-        "{:,} Gold Pieces and {:,} Platinum Pieces".format(dice_roller.d6(4)*1000,dice_roller.d6(5)*100)
-    )
+        "{:,} Gold Pieces and {:,} Platinum Pieces".
+            format(dice_roller.d6(4)*1000,dice_roller.d6(5)*100))
+
+def seventeen_plus():
+    print("Your hoard includes the following")
+    print(
+        "{:,} Gold Pieces and {:,} Platinum Pieces".
+            format(dice_roller.d6(12)*1000,dice_roller.d6(8)*1000))
 
 # Rolling on CR 0 - 4 table
 if 0 <= challenge_rating <= 4:
@@ -350,8 +364,103 @@ if 11 <= challenge_rating <= 16:
         print(tables.print_returns(tables.one_thousand_gp_gem(dice_roller.d6(3))))
         print(tables.print_returns(tables.magic_table_i()))
 
-
-
-
-
-#if 17 <= challenge_rating <= 20:
+if 17 <= challenge_rating <= 20:
+    rando_hundred = dice_roller.d100()
+    if 1 <= rando_hundred <= 2:
+        seventeen_plus()
+    if 3 <= rando_hundred <= 5:
+        seventeen_plus()
+        print(tables.print_returns(tables.one_thousand_gp_gem(dice_roller.d6(3))))
+        print(tables.print_returns(tables.magic_table_c(dice_roller.d8())))
+    if 6 <= rando_hundred <= 8:
+        seventeen_plus()
+        print(tables.print_returns(tables.twenty_five_gp_art(dice_roller.d10())))
+        print(tables.print_returns(tables.magic_table_c(dice_roller.d8())))
+    if 9 <= rando_hundred <= 11:
+        seventeen_plus()
+        print(tables.print_returns(tables.seven_thousand_five_hundred_gp_art(dice_roller.d4())))
+        print(tables.print_returns(tables.magic_table_c(dice_roller.d8())))
+    if 12 <= rando_hundred <= 14:
+        seventeen_plus()
+        print(tables.print_returns(tables.five_thousand_gem(dice_roller.d8())))
+        print(tables.print_returns(tables.magic_table_c(dice_roller.d8())))
+    if 15 <= rando_hundred <= 22:
+        seventeen_plus()
+        print(tables.print_returns(tables.one_thousand_gp_gem(dice_roller.d6(3))))
+        print(tables.print_returns(tables.magic_table_d(dice_roller.d6())))
+    if 23 <= rando_hundred <= 30:
+        seventeen_plus()
+        print(tables.print_returns(tables.twenty_five_gp_art(dice_roller.d10())))
+        print(tables.print_returns(tables.magic_table_d(dice_roller.d6())))
+    if 31 <= rando_hundred <= 38:
+        seventeen_plus()
+        print(tables.print_returns(tables.seven_thousand_five_hundred_gp_art(dice_roller.d4())))
+        print(tables.print_returns(tables.magic_table_d(dice_roller.d6())))
+    if 39 <= rando_hundred <= 46:
+        seventeen_plus()
+        print(tables.print_returns(tables.five_thousand_gem(dice_roller.d8())))
+        print(tables.print_returns(tables.magic_table_d(dice_roller.d6())))
+    if 47 <= rando_hundred <= 52:
+        seventeen_plus()
+        print(tables.print_returns(tables.one_thousand_gp_gem(dice_roller.d6(3))))
+        print(tables.print_returns(tables.magic_table_e(dice_roller.d6())))
+    if 53 <= rando_hundred <= 58:
+        seventeen_plus()
+        print(tables.print_returns(tables.twenty_five_gp_art(dice_roller.d10())))
+        print(tables.print_returns(tables.magic_table_e(dice_roller.d6())))
+    if 59 <= rando_hundred <= 63:
+        seventeen_plus()
+        print(tables.print_returns(tables.seven_thousand_five_hundred_gp_art(dice_roller.d4())))
+        print(tables.print_returns(tables.magic_table_e(dice_roller.d6())))
+    if 64 <= rando_hundred <= 68:
+        seventeen_plus()
+        print(tables.print_returns(tables.five_thousand_gem(dice_roller.d8())))
+        print(tables.print_returns(tables.magic_table_e(dice_roller.d6())))
+    if rando_hundred == 69:
+        seventeen_plus()
+        print(tables.print_returns(tables.one_thousand_gp_gem(dice_roller.d6(3))))
+        print(tables.print_returns(tables.magic_table_g(dice_roller.d4())))
+    if rando_hundred == 70:
+        seventeen_plus()
+        print(tables.print_returns(tables.twenty_five_gp_art(dice_roller.d10())))
+        print(tables.print_returns(tables.magic_table_g(dice_roller.d4())))
+    if rando_hundred == 71:
+        seventeen_plus()
+        print(tables.print_returns(tables.seven_thousand_five_hundred_gp_art(dice_roller.d4())))
+        print(tables.print_returns(tables.magic_table_g(dice_roller.d4())))
+    if rando_hundred == 72:
+        seventeen_plus()
+        print(tables.print_returns(tables.five_thousand_gem(dice_roller.d8())))
+        print(tables.print_returns(tables.magic_table_g(dice_roller.d4())))
+    if 73 <= rando_hundred <= 74:
+        seventeen_plus()
+        print(tables.print_returns(tables.one_thousand_gp_gem(dice_roller.d6(3))))
+        print(tables.print_returns(tables.magic_table_h(dice_roller.d4())))
+    if 75 <= rando_hundred <= 76:
+        seventeen_plus()
+        print(tables.print_returns(tables.twenty_five_gp_art(dice_roller.d10())))
+        print(tables.print_returns(tables.magic_table_h(dice_roller.d4())))
+    if 77 <= rando_hundred <= 78:
+        seventeen_plus()
+        print(tables.print_returns(tables.seven_thousand_five_hundred_gp_art(dice_roller.d4())))
+        print(tables.print_returns(tables.magic_table_h(dice_roller.d4())))
+    if 79 <= rando_hundred <= 80:
+        seventeen_plus()
+        print(tables.print_returns(tables.five_thousand_gem(dice_roller.d8())))
+        print(tables.print_returns(tables.magic_table_h(dice_roller.d4())))
+    if 81 <= rando_hundred <= 85:
+        seventeen_plus()
+        print(tables.print_returns(tables.one_thousand_gp_gem(dice_roller.d6(3))))
+        print(tables.print_returns(tables.magic_table_i(dice_roller.d4())))
+    if 86 <= rando_hundred <= 90:
+        seventeen_plus()
+        print(tables.print_returns(tables.twenty_five_gp_art(dice_roller.d10())))
+        print(tables.print_returns(tables.magic_table_i(dice_roller.d4())))
+    if 91 <= rando_hundred <= 95:
+        seventeen_plus()
+        print(tables.print_returns(tables.seven_thousand_five_hundred_gp_art(dice_roller.d4())))
+        print(tables.print_returns(tables.magic_table_i(dice_roller.d4())))
+    if 96 <= rando_hundred <= 100:
+        seventeen_plus()
+        print(tables.print_returns(tables.five_thousand_gem(dice_roller.d8())))
+        print(tables.print_returns(tables.magic_table_i(dice_roller.d4())))
