@@ -4,73 +4,12 @@
 
 import random
 
-# Roll four-sided die
-def d4(number=1):
-    dice_roll = 0
-    while number > 0:
-        rando = random.randint(1,4)
-        dice_roll = dice_roll + rando
-        number = number - 1
-    return dice_roll
+# Dice Roller
 
-# Roll six-sided die
-def d6(number=1):
+def dx(num_sides=6,num_dice=1):
     dice_roll = 0
-    while number > 0:
-        rando = random.randint(1,6)
+    while num_dice > 0:
+        rando = random.randint(1,num_sides)
         dice_roll = dice_roll + rando
-        number = number - 1
-    return dice_roll
-
-# Roll eight-sided die
-def d8(number=1):
-    dice_roll = 0
-    while number > 0:
-        rando = random.randint(1,8)
-        dice_roll = dice_roll + rando
-        number = number - 1
-    return dice_roll
-
-# Roll ten-sided die
-def d10(number=1):
-    dice_roll = 0
-    while number > 0:
-        rando = random.randint(1,10)
-        dice_roll = dice_roll + rando
-        number = number - 1
-    return dice_roll
-
-# Roll twelve-sided die
-def d12(number=1):
-    dice_roll = 0
-    while number > 0:
-        rando = random.randint(1,12)
-        dice_roll = dice_roll + rando
-        number = number - 1
-    return dice_roll
-
-# Roll twenty-sided die
-def d20(number=1):
-    dice_roll = 0
-    while number > 0:
-        rando = random.randint(1,20)
-        dice_roll = dice_roll + rando
-        number = number - 1
-    return dice_roll
-
-# Roll hundred-sided die
-def d100(number=1):
-    dice_roll = 0
-    while number > 0:
-        rando = random.randint(1,100)
-        dice_roll = dice_roll + rando
-        number = number - 1
-    return dice_roll
-
-def dx(sides, number=1):
-    dice_roll = 0
-    while number > 0:
-        rando = random.randint(1,sides)
-        dice_roll = dice_roll + rando
-        number -= 1
+        num_dice = num_dice - 1
     return dice_roll

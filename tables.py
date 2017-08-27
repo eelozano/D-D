@@ -125,7 +125,7 @@ def magic_spell(inp_level):
 def magic_table_a(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 50:
             temp_array.append("Potion of Healing")
         if 51 <= rando_hundred <= 60:
@@ -149,7 +149,7 @@ def magic_table_a(number=1):
 def magic_table_b(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 15:
             temp_array.append("Potion of Healing")
         if 16 <= rando_hundred <= 22:
@@ -227,7 +227,7 @@ def magic_table_b(number=1):
 def magic_table_c(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 15:
             temp_array.append("Potion of Superior Healing")
         if 16 <= rando_hundred <= 22:
@@ -291,7 +291,7 @@ def magic_table_c(number=1):
 def magic_table_d(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 20:
             temp_array.append("Potion of Supreme Healing")
         if 21 <= rando_hundred <= 30:
@@ -330,7 +330,7 @@ def magic_table_d(number=1):
 def magic_table_e(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 30:
             temp_array.append("Spell Scroll - {} - 8th Level".format(magic_spell('8th-level')))
         if 31 <= rando_hundred <= 55:
@@ -351,7 +351,7 @@ def magic_table_e(number=1):
 def magic_table_f(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 15:
             temp_array.append("Weapon +1")
         if 16 <= rando_hundred <= 18:
@@ -478,7 +478,7 @@ def magic_table_f(number=1):
 def magic_table_g(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 11:
             temp_array.append("Weapon +2")
         if 12 <= rando_hundred <= 14:
@@ -663,7 +663,7 @@ def magic_table_g(number=1):
 def magic_table_h(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 10:
             temp_array.append("Weapon +3")
         if 11 <= rando_hundred <= 12:
@@ -808,7 +808,7 @@ def magic_table_h(number=1):
 def magic_table_i(number=1):
     temp_array = []
     while number > 0:
-        rando_hundred = dice_roller.d100()
+        rando_hundred = dice_roller.dx(100,1)
         if 1 <= rando_hundred <= 5:
             temp_array.append("Defender")
         if 6 <= rando_hundred <= 10:
