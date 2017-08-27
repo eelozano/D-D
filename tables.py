@@ -1,13 +1,14 @@
-# This will be the library for roll tables to be used throughout other programs.
-# All roll tables will accept a variable to allow for the return of multiple
-# items at once.  The returns are currently strings, but in the future (depending
-# on how the programs play out) it will probably start returning lists to allow
-# individual programs to decide how to manipulate the returns.
+# This is a library for roll tables to be used throughout other programs.
+# All roll tables accept a variable to allow for the return of multiple
+# items at once.
 
 # Importing modules
 import random
 import dice_roller
 import json
+
+
+# Utility Functions #
 
 # Prints a human readable list
 def print_returns(input_list):
@@ -24,7 +25,19 @@ def print_returns(input_list):
         return_string = return_string + "and {}".format(input_list[0])
     return return_string
 
+# Pull a random magic spell of input level from a json file of all SRD spells
+def magic_spell(inp_level):
+    spell_list = json.loads(open('5e-SRD-Spells.json').read())
+    temp_array = []
+    for spell_object in spell_list:
+        if spell_object['level'] == inp_level:
+            temp_array.append(spell_object)
+    array_length = len(temp_array)
+    random_number = random.randint(0, array_length - 1)
+    return (temp_array[random_number])['name']
 
+# Takes a list and a number.  Returns a list with a number of items equal to number.
+# These items are randomly chosen from source list.
 def random_list_appender(input_list, number):
     return_list = []
     while number > 0:
@@ -32,6 +45,9 @@ def random_list_appender(input_list, number):
         number -= 1
     return return_list
 
+# Tables #
+
+# Gem Tables #
 
 def ten_gp_gem(number=1):
     items = ["Azurite", "Banded agate", "Blue quartz", "Eyeagate", "Hematite",
@@ -66,6 +82,7 @@ def five_thousand_gem(number=1):
     items = ["Black sapphire", "Diamond", "Jacinth", "Ruby"]
     return random_list_appender(items, number)
 
+# Art Tables #
 
 def twenty_five_gp_art(number=1):
     items = ["Silver ewer", "Carved bone statuette", "Small gold bracelet", "Cloth-of-gold vestments",
@@ -109,18 +126,7 @@ def seven_thousand_five_hundred_gp_art(number=1):
              "Bejeweled ivory drinking horn with gold filigree"]
     return random_list_appender(items, number)
 
-
-# Pull a random magic spell of input level from a json file of all SRD spells
-def magic_spell(inp_level):
-    spell_list = json.loads(open('5e-SRD-Spells.json').read())
-    temp_array = []
-    for spell_object in spell_list:
-        if spell_object['level'] == inp_level:
-            temp_array.append(spell_object)
-    array_length = len(temp_array)
-    random_number = random.randint(0, array_length - 1)
-    return (temp_array[random_number])['name']
-
+# Magic Tables #
 
 def magic_table_a(number=1):
     temp_array = []
