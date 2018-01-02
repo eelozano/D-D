@@ -6,9 +6,12 @@ def die_roller():
     num_die = input('How many die would you like to roll? ')
     result = dice_roller.dxplus(int(sides),int(num_die))
     question = input('Would you like to see the results of the individual die? [Y,N]')
-    if (question == 'Y'):
+    if (question == 'Y' or question == 'y'):
         print('You rolled a total of: ' + str(result[0]) + '\n')
         print('Your individual rolls were: ' + str(result[1]) + '\n')
+    if (question == 'N' or question == 'n'):
+        print('You rolled a total of: ' + str(result[0] + '\n'))
+    input('Hit ENTER to return to main menu\n\n')
 
 
 def main_menu():
@@ -22,10 +25,11 @@ def main_menu():
     print('5. EXIT')
     print(45 * '-' + '\n')
 
-main_menu()
-answer = input("What is your selection? ")
-print(answer)
-if (int(answer) == 1):
-    die_roller()
-
-11
+while (True):
+    main_menu()
+    answer = input("What is your selection? ")
+    print(answer)
+    if (int(answer) == 1):
+        die_roller()
+    if (int(answer) == 5):
+        break
